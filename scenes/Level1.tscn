@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://da0ogtxj8nd2t"]
+
+[ext_resource type="PackedScene" uid="uid://dsigcq8dnu2xo" path="res://scenes/World1.tscn" id="1_4f5aj"]
+[ext_resource type="PackedScene" uid="uid://brofjsfs4d7oe" path="res://scenes/Player.tscn" id="2_75fs6"]
+[ext_resource type="PackedScene" uid="uid://dyyavwi0r51dp" path="res://scenes/AreaTrigger.tscn" id="3_dlpi4"]
+
+[node name="Level1" type="Node3D"]
+
+[node name="World1" parent="." instance=ExtResource("1_4f5aj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 5.92191, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_75fs6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.361582, -2.50148, 7.16289)
+
+[node name="Area Trigger" parent="." instance=ExtResource("3_dlpi4")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, -2, -15)
+change_to_scene = "WinScreen"
+
+[node name="Area Trigger2" parent="." instance=ExtResource("3_dlpi4")]
+transform = Transform3D(4.5, 0, 0, 0, 1, 0, 0, 0, 7.9, 0, -11, -5)

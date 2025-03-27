@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://65h4c0mrp6k7"]
 
-[ext_resource type="PackedScene" path="res://Scenes/Box.tscn" id="1"]
-[ext_resource type="Script" path="res://Scenes/switch.gd" id="2_478kq"]
+[ext_resource type="PackedScene" path="res://scenes/Box.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/switch.gd" id="2_478kq"]
 [ext_resource type="PackedScene" uid="uid://brofjsfs4d7oe" path="res://scenes/Player.tscn" id="2_vqqkd"]
 
 [sub_resource type="StandardMaterial3D" id="3"]
