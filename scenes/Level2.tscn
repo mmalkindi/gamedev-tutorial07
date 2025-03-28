@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bef5hpc770rr2"]
+
+[ext_resource type="PackedScene" uid="uid://cib0ndvsu2ug1" path="res://scenes/World2.tscn" id="1_esxnp"]
+[ext_resource type="PackedScene" uid="uid://brofjsfs4d7oe" path="res://scenes/Player.tscn" id="2_n8eys"]
+[ext_resource type="PackedScene" uid="uid://cormghioopy1w" path="res://scenes/HUD.tscn" id="3_fynew"]
+[ext_resource type="PackedScene" uid="uid://dyyavwi0r51dp" path="res://scenes/AreaTrigger.tscn" id="4_304u2"]
+
+[node name="Level2" type="Node3D"]
+
+[node name="World2" parent="." instance=ExtResource("1_esxnp")]
+
+[node name="Player" parent="." instance=ExtResource("2_n8eys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 8.5)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("3_fynew")]
+
+[node name="Area Trigger" parent="." instance=ExtResource("4_304u2")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 2.75, -28.5)
+change_to_scene = "WinScreen"

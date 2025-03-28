@@ -1,0 +1,104 @@
+[gd_scene load_steps=3 format=3 uid="uid://cib0ndvsu2ug1"]
+
+[ext_resource type="PackedScene" uid="uid://rdtqsy78mit7" path="res://scenes/Coin.tscn" id="1_kji7e"]
+[ext_resource type="PackedScene" uid="uid://dtucrxilmpff7" path="res://scenes/ObjLamp.tscn" id="2_7ctyt"]
+
+[node name="World2" type="Node3D"]
+
+[node name="Base" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 4.875, -12.25)
+use_collision = true
+flip_faces = true
+size = Vector3(20, 10.75, 44.5)
+
+[node name="Walls" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.625, 4.875, -0.625)
+operation = 1
+use_collision = true
+size = Vector3(8.5, 10.75, 1.75)
+
+[node name="Walls3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, 4.875, -8.625)
+operation = 1
+use_collision = true
+size = Vector3(15, 10.75, 1.75)
+
+[node name="Walls2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.875, 4.875, -0.625)
+operation = 1
+use_collision = true
+size = Vector3(8.5, 10.75, 1.75)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.875, -0.625)
+omni_range = 15.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.53146, -28.4579)
+light_color = Color(1, 1, 0.0823529, 1)
+light_energy = 5.0
+omni_range = 20.0
+omni_attenuation = 0.798
+
+[node name="ObjLamp" parent="." instance=ExtResource("2_7ctyt")]
+transform = Transform3D(11.4632, 0, 0, 0, 11.4632, 0, 0, 0, 11.4632, 0, 0, -28.2802)
+
+[node name="CoinPos" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.5)
+
+[node name="Coin" parent="CoinPos" instance=ExtResource("1_kji7e")]
+
+[node name="CoinPos2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.2, -4)
+
+[node name="Coin" parent="CoinPos2" instance=ExtResource("1_kji7e")]
+
+[node name="CoinPos3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.2, -4)
+
+[node name="Coin" parent="CoinPos3" instance=ExtResource("1_kji7e")]
+
+[node name="CoinPos4" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -14)
+
+[node name="Coin" parent="CoinPos4" instance=ExtResource("1_kji7e")]
+
+[node name="CoinPos5" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.2, -14)
+
+[node name="Coin" parent="CoinPos5" instance=ExtResource("1_kji7e")]
+
+[node name="CoinPos6" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.2, -14)
+
+[node name="Coin" parent="CoinPos6" instance=ExtResource("1_kji7e")]
+
+[node name="CoinPos7" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -18)
+
+[node name="Coin" parent="CoinPos7" instance=ExtResource("1_kji7e")]
+
+[node name="CoinPos8" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.2, -18)
+
+[node name="Coin" parent="CoinPos8" instance=ExtResource("1_kji7e")]
+
+[node name="CoinPos9" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.2, -18)
+
+[node name="Coin" parent="CoinPos9" instance=ExtResource("1_kji7e")]
+
+[node name="CoinPos10" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -22)
+
+[node name="Coin" parent="CoinPos10" instance=ExtResource("1_kji7e")]
+
+[node name="CoinPos11" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.2, -22)
+
+[node name="Coin" parent="CoinPos11" instance=ExtResource("1_kji7e")]
+
+[node name="CoinPos12" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.2, -22)
+
+[node name="Coin" parent="CoinPos12" instance=ExtResource("1_kji7e")]
