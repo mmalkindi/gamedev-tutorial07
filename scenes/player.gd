@@ -41,6 +41,19 @@ func _physics_process(delta):
 
 	movement_vector = movement_vector.normalized()
 
+	# apply crouch and sprint
+	if Input.is_action_pressed("crouch"):
+		speed = 1
+		camera.v_offset = -0.25
+	else:
+		camera.v_offset = 0
+		if Input.is_action_pressed("sprint"):
+			camera.fov = 95  # illusion of speed
+			speed = 10
+		else:
+			camera.fov = 90
+			speed = 8
+
 	velocity.x = lerp(velocity.x, movement_vector.x * speed, acceleration * delta)
 	velocity.z = lerp(velocity.z, movement_vector.z * speed, acceleration * delta)
 
