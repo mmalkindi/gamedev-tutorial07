@@ -6,15 +6,9 @@
 albedo_color = Color(0.582663, 0.77319, 0.909381, 1)
 
 [node name="World1" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 5.92191, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
-omni_range = 15.0
-
-[node name="LightSource" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.25, 0, 0)
-light_color = Color(1, 0.968459, 0.741365, 1)
 omni_range = 15.0
 
 [node name="LightSource2" type="OmniLight3D" parent="."]

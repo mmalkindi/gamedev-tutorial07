@@ -33,3 +33,8 @@ mode = 1
 spin_degrees = 360.0
 spin_sides = 12
 material = SubResource("StandardMaterial3D_mu4u5")
+
+[node name="LightSource" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+light_color = Color(1, 0.968459, 0.741365, 1)
+omni_range = 15.0

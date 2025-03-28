@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://da0ogtxj8nd2t"]
+[gd_scene load_steps=6 format=3 uid="uid://da0ogtxj8nd2t"]
 
 [ext_resource type="PackedScene" uid="uid://dsigcq8dnu2xo" path="res://scenes/World1.tscn" id="1_4f5aj"]
 [ext_resource type="PackedScene" uid="uid://brofjsfs4d7oe" path="res://scenes/Player.tscn" id="2_75fs6"]
 [ext_resource type="PackedScene" uid="uid://dyyavwi0r51dp" path="res://scenes/AreaTrigger.tscn" id="3_dlpi4"]
+[ext_resource type="PackedScene" uid="uid://rdtqsy78mit7" path="res://scenes/Coin.tscn" id="4_4r47m"]
+[ext_resource type="PackedScene" uid="uid://cormghioopy1w" path="res://scenes/HUD.tscn" id="5_rnu7d"]
 
 [node name="Level1" type="Node3D"]
 
@@ -14,7 +16,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.361582, -2.50148, 7.16289)
 
 [node name="Area Trigger" parent="." instance=ExtResource("3_dlpi4")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, -2, -15)
-change_to_scene = "WinScreen"
+change_to_scene = "Level2"
 
 [node name="Area Trigger2" parent="." instance=ExtResource("3_dlpi4")]
 transform = Transform3D(4.5, 0, 0, 0, 1, 0, 0, 0, 7.9, 0, -11, -5)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("5_rnu7d")]
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.25, -5)
+
+[node name="Coin" parent="Node3D" instance=ExtResource("4_4r47m")]
