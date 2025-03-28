@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cormghioopy1w"]
+
+[ext_resource type="Script" path="res://scenes/coin_counter.gd" id="1_dqslp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_aynhr"]
+font_size = 20
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="HUD" type="MarginContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 63.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="CoinCounter" type="Label" parent="."]
+layout_mode = 2
+text = "Coins : 0"
+label_settings = SubResource("LabelSettings_aynhr")
+script = ExtResource("1_dqslp")
